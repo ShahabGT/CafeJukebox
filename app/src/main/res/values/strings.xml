@@ -1,3 +1,29 @@
 <resources>
     <string name="app_name">Cafe Jukebox</string>
+
+    <string name="number_digits">0123456789</string>
+
+    <string name="internet_error">اتصال به اینترنت را بررسی کنید!</string>
+    <string name="number_error">لطفا شماره تلفن همراه را بررسی کنید!</string>
+    <string name="general_error">خطا لطفا دوباره امتحان کنید!</string>
+    <string name="blocked_error">حساب کاربری شما مسدود شده است با پشتبانی تماس بگیرید!</string>
+    <string name="welcome_error">خوش آمدید!</string>
+
+
+    <string name="splash_xml_title">Cafe Jukebox</string>
+    <string name="splash_xml_user">ورود کاربر</string>
+    <string name="splash_xml_cafe">ورود کافه</string>
+
+    <string name="login_xml_title">لطفا وارد شوید یا ثبت نام کنید</string>
+    <string name="login_xml_des">برای دسترسی به امکانات برنامه باید ثبت نام کنید و یا وارد حساب کاربری خود شوید</string>
+    <string name="login_xml_hint">تلفن همراه</string>
+    <string name="login_xml_send">ادامه</string>
+
+    <string name="code_xml_title">کد به شماره تلفن شما ارسال شد
+لطفا کد را در کادر زیر وارد کنید</string>
+    <string name="code_xml_hint">کد تایید</string>
+    <string name="code_xml_send">تایید</string>
+    <string name="code_xml_resend">ارسال مجدد</string>
+
+
 </resources>

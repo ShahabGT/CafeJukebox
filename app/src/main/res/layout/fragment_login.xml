@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.LoginFragment">
+
+
+    <ImageView
+        android:src="@drawable/logo"
+        android:id="@+id/login_logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline" />
+
+    <TextView
+        android:id="@+id/login_title"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/vazir"
+        android:text="@string/login_xml_title"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/primary_dark"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_logo" />
+
+    <TextView
+        android:id="@+id/login_des"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/vazir"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="@string/login_xml_des"
+        android:textColor="@color/primary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_title" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_number_title"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:hint="@string/login_xml_hint"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_des">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="@string/number_digits"
+            android:fontFamily="@font/vazir"
+            android:drawablePadding="6dp"
+            android:drawableRight="@drawable/vector_phone"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:padding="16dp"
+            android:singleLine="true" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_send"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/vazir"
+        android:text="@string/login_xml_send"
+        app:layout_constraintLeft_toLeftOf="@id/login_number_title"
+        app:layout_constraintTop_toBottomOf="@id/login_number_title"
+        android:layout_height="wrap_content"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+</androidx.constraintlayout.widget.ConstraintLayout>

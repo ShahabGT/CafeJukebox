@@ -1,8 +1,10 @@
-package ir.cafejukebox.app;
+package ir.cafejukebox.app.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import ir.cafejukebox.app.R;
 
 public class MainActivity extends AppCompatActivity {
 
