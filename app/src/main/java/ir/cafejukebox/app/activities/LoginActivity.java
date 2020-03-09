@@ -24,6 +24,7 @@ import com.google.firebase.iid.InstanceIdResult;
 import ir.cafejukebox.app.R;
 import ir.cafejukebox.app.classes.MyPreference;
 import ir.cafejukebox.app.fragments.LoginFragment;
+import ir.cafejukebox.app.fragments.ProfileFragment;
 
 public class LoginActivity extends AppCompatActivity {
     private static final int SMS_CONSENT_REQUEST = 365;
@@ -33,20 +34,30 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        getSupportFragmentManager().beginTransaction()
-                .replace(R.id.login_container,new LoginFragment()).commit();
+        if(!MyPreference.getInstance(this).getAccessToken().isEmpty()){
 
-        FirebaseInstanceId.getInstance().getInstanceId().addOnCompleteListener(task-> {
-                if(task.isSuccessful() && task.getResult()!=null){
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.login_container,new ProfileFragment()).commit();
+
+
+        }else {
+
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.login_container, new LoginFragment()).commit();
+
+            FirebaseInstanceId.getInstance().getInstanceId().addOnCompleteListener(task -> {
+                if (task.isSuccessful() && task.getResult() != null) {
                     String fbToken = task.getResult().getToken();
                     MyPreference.getInstance(LoginActivity.this).setFbToken(fbToken);
                 }
 
 
-        });
+            });
 
-        IntentFilter intentFilter = new IntentFilter(SmsRetriever.SMS_RETRIEVED_ACTION);
-        registerReceiver(smsVerificationReceiver, intentFilter);
+            IntentFilter intentFilter = new IntentFilter(SmsRetriever.SMS_RETRIEVED_ACTION);
+            registerReceiver(smsVerificationReceiver, intentFilter);
+
+        }
     }
 
     @Override

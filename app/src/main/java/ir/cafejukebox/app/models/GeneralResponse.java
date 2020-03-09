@@ -41,4 +41,40 @@ public class GeneralResponse {
     public String getMessage() {
         return message;
     }
+
+    public String getAccessToken() {
+        return accessToken;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public String getMobileNumber() {
+        return mobileNumber;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public String getRegDate() {
+        return regDate;
+    }
+
+    public String getScore() {
+        return score;
+    }
+
+    public String getFirstTime() {
+        return firstTime;
+    }
 }

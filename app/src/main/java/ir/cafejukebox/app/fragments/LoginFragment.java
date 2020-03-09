@@ -104,7 +104,7 @@ public class LoginFragment extends Fragment {
                         send.setEnabled(true);
                         if(response.isSuccessful() && response.body()!=null){
                             if(response.body().getStatus().equals("success")){
-                                Toast.makeText(context, getString(R.string.welcome_error), Toast.LENGTH_SHORT).show();
+                               // Toast.makeText(context, getString(R.string.welcome_error), Toast.LENGTH_SHORT).show();
                                 MyPreference.getInstance(context).setNumber(number);
                                 activity.getSupportFragmentManager().beginTransaction()
                                         .setCustomAnimations(R.anim.enter_left,R.anim.exit_right)

@@ -22,9 +22,5 @@ public interface Api {
             @Field("reg_code") String code,
             @Field("fb_token") String fbToken);
 
-    @FormUrlEncoded
-    @POST("resend.php")
-    Call<GeneralResponse> resendSMS(
-            @Field("number") String number);
 
 }

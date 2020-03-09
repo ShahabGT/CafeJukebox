@@ -29,13 +29,14 @@ public class SplashActivity extends AppCompatActivity {
                 startActivity(new Intent(SplashActivity.this, MainActivity.class));
                 SplashActivity.this.finish();
             },2500);
-        }
-        user = findViewById(R.id.splash_user);
-        cafe = findViewById(R.id.splash_cafe);
-        user.setVisibility(View.VISIBLE);
-        cafe.setVisibility(View.VISIBLE);
+        }else {
+            user = findViewById(R.id.splash_user);
+            cafe = findViewById(R.id.splash_cafe);
+            user.setVisibility(View.VISIBLE);
+            cafe.setVisibility(View.VISIBLE);
 
-        onClicks();
+            onClicks();
+        }
     }
 
     private void onClicks(){

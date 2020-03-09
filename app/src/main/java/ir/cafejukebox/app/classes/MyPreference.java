@@ -38,4 +38,25 @@ public class MyPreference {
     public String getFbToken(){
         return sp.getString("fbToken","");
     }
+
+    public void setAccessToken(String accessToken){
+        sp.edit().putString("accessToken",accessToken).apply();
+    }
+    public String getAccessToken(){
+        return sp.getString("accessToken","");
+    }
+
+    public void setUserId(String userId){
+        sp.edit().putString("userId",userId).apply();
+    }
+    public String getUserId(){
+        return sp.getString("userId","");
+    }
+
+    public void setName(String name){
+        sp.edit().putString("name",name).apply();
+    }
+    public String getName(){
+        return sp.getString("name","");
+    }
 }
